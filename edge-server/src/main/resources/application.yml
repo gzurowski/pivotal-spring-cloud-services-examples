@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: ${vcap.application.name:edge-server}
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
+
+info:
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+zuul:
+  debug:
+    request: true
+
+ribbon:
+    IsSecure: false
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.cloud: DEBUG

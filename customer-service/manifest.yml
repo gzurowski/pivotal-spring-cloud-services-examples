@@ -1,0 +1,10 @@
+---
+applications:
+- name: customer-service
+  memory: 512M
+  instances: 1
+  host: customer-service
+  path: target/customer-service.jar
+services:
+- service-registry
+- config-server

@@ -1,0 +1,9 @@
+---
+applications:
+- name: address-service
+  memory: 512M
+  instances: 1
+  host: address-service
+  path: target/address-service.jar
+services:
+- service-registry

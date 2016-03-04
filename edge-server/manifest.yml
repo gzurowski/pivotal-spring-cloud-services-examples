@@ -1,0 +1,11 @@
+---
+applications:
+- name: edge-server
+  memory: 512M
+  instances: 1
+  host: edge-server
+  path: target/edge-server.jar
+services:
+- config-server
+- service-registry
+- circuit-breaker
